@@ -15,87 +15,84 @@
 
 <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="jumbotron text-center">
-            <h1><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;Personalized Train Schedules
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron text-center">
+                    <h1><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;Personalized Train Schedules
             <small>Local times and places for the next train</small></h1>
-            <h3>Current time: </h3>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Current Train Schedule</h2>
-            </div>
-            <div class="panel-body">
-              <table class="table table-striped">
-                <thead>
-                  <th>Train Name</th>
-                  <th>Destination</th>
-                  <th>Frequency (min)</th>
-                  <th>Next Arrival</th>
-                  <th>Minutes Away</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                  </tr>
-                  <tr>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                    <td>Sample Data</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">Info</h2>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="page-header">
-                    <h3>Map</h3>
-                  </div>
+                    <h3>Current time: </h3>
                 </div>
-                <div class="col-md-12">
-                  <div class="page-header">
-                    <h3>Add Train</h3>
-                  </div>
-                  <form>
-                    <div class="form-group">
-                      <label for="Train Name">Train Name</label>
-                      <input type="text" class="form-control">
-                      <label for="Destination">Destination</label>
-                      <input type="text" class="form-control">
-                      <label for="First Train Time">First Train Time (HH:mm - 24 hour format)</label>
-                      <input type="text" class="form-control">
-                      <label for="Frequency">Frequency (min)</label>
-                      <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Current Train Schedule</h2>
                     </div>
-                    <button type="submit" class="btn btn-primary" name="Submit Train">Submit</button>
-                    <button type="button" class="btn btn-warning" name="Clear input">Clear</button>
-                  </form>
+                    <div class="panel-body">
+                        <table class="table table-striped table-hover" id="trainTable">
+                            <thead>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Info</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="page-header">
+                                    <h3>Map</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="page-header">
+                                    <h3>Add Train</h3>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="Train Name">Train Name</label>
+                                        <input type="text" class="form-control" id="trainInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Destination City">Destination City</label>
+                                        <input type="text" class="form-control" id="destCityInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Destination State">Destination State</label>
+                                        <input type="text" class="form-control" id="destStateInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="First Train Time">First Train Time (HH:mm - 24 hour format)</label>
+                                        <input type="time" class="form-control" id="firstTimeInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Frequency">Frequency (min)</label>
+                                        <input type="number" min="1" class="form-control" id="freqInput">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" name="Submit Train" id="addTrain">Submit</button>
+                                    <button type="button" class="btn btn-warning" name="Clear input" id="clearInput">Clear</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- <div class="row">
+        <!-- <div class="row">
         <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
