@@ -89,7 +89,7 @@ database.ref().on("child_added", function(snapshot) {
   var nextTrain = moment().add(tMinutesTillTrain, "minutes");
   console.log("Arrival time: " + moment(nextTrain).format("hh:mm"))
 
-  $('#trainTable > tbody').append('<tr><td>' + trainName + '</td><td>' + destinationCity + ", " + destinationState + '</td><td>' + frequency + '</td><td>' + moment(nextTrain).format("hh:mm") + '</td><td>' + tMinutesTillTrain + '</td></tr>');
+  $('#trainTable > tbody').append('<tr><td>' + trainName + '</td><td>' + destinationCity + ", " + destinationState + '</td><td class="text-right">' + frequency + '</td><td class="text-right">' + moment(nextTrain).format("hh:mm") + '</td><td class="text-right">' + tMinutesTillTrain + '</td></tr>');
 
 }, function(errorObject){
   console.log("Errors occured: " + errorObject.code);
